@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan CSS</title>
+  <style>
+     .topbar {
+    background: rgb(143, 155, 168);
+    padding: 10px 30px;
+    text-align: right;
+}
+
+.menu li{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 700;
+  color: black;
+}
+.menu li a{
+  text-decoration: none;
+  color: black;
+}
+.topbar a {
+	color: white;
+	text-decoration: none;
+	margin-left: 15px;
+	font-size: 14px;
+}
+        .topbar .regis {
+	background-color: grey;
+	color: #000;
+	padding: 5px 10px;
+	border-radius: 0.5rem;
+}
+.topbar .login {
+	background-color: #368bd1;
+	color: white;
+	padding: 5px 10px;
+	border-radius: 0.5rem;
+}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+    .navbar-main {
+    background: rgb(255, 255, 255);
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .navbar-main .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    }
+
+.navbar-main .menu > li {
+    position: relative;
+    display: flex;
+}
+
+.navbar-main .menu > li > a {
+    display: block;
+    padding: 18px 10px;
+    color: black;
+    font-size: 18px;
+    font-family: 'poppins',Georgia, serif;
+    text-decoration: none;
+}
+
+.navbar-main .menu > li:hover > a {
+    color: #333;
+}
+.navbar-main .menu li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #f9f9f9;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 1px solid #ccc;
+    z-index: 999;
+}
+
+.navbar-main .menu li:hover > ul {
+    display: block;
+}
+
+.navbar-main .menu li ul li a {
+    display: block;
+    padding: 10px 15px;
+    color: black;
+    text-decoration: none;
+    background: #f9f9f9;
+}
+
+.navbar-main .menu li ul li a:hover {
+    background: #ddd;
+}
+
+.navbar-main .menu li ul li {
+    position: relative;
+}
+
+.navbar-main .menu li ul li ul {
+    top: 0;
+    left: 100%;
+}
+    header {
+      background-color: #f2f2f2;
+      padding: 10px 40px;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid #000;
+    }
+    .logo {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    h2 {
+      margin: 0;
+    }
+    nav {
+      background-color: #eee;
+      border-bottom: 2px solid #000;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 40px;
+    }
+    .section-title {
+      margin: 30px 0 15px;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      justify-content: center;
+    }
+    .item {
+      border: 1px solid #000;
+      background-color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+    .item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border: 1px solid #000;
+    }
+    .item p {
+      margin: 10px 0 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+    <div class="topbar">
+  <a href="..." class="regis">Registrasi</a>
+  <a href="..." class="login">Login</a>
+</div>
+  <header>
+    <img src="logo.jpeg" alt="Logo DIMSHELF" class="logo">
+    <h2>DIMSHELF</h2>
+  </header>
+  <nav class="navbar-main">
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">Buku</a>
+            <ul>
+                <li>
+                    <a href="#">Fiksi</a>
+                    <ul>
+                        <li><a href="#">manga</a></li>
+                        <li><a href="#">Komik</a></li>
+                        <li><a href="#">Manwa</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">NonFiksi</a>
+                    <ul>
+                        <li><a href="#">Kitab</a></li>
+                        <li><a href="#">Novel</a></li>
+                        <li><a href="#">Makalah</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">Majalah</a></li>
+        <li><a href="#">Koran</a></li>
+    </ul>
+</nav>
+  <div class="container">
+
+    <!-- Buku Best Seller -->
+    <div class="section-title">BUKU BEST SELLER</div>
+    <div class="grid-container">
+      <div class="item"><img src="lp.jpeg" alt="Buku 1"><p>LASKAR PELANGI<br>Rp75.000</p></div>
+      <div class="item"><img src="filosofi.jpeg" alt="Buku 2"><p>FILOSOFI TERAS<br>Rp50.000</p></div>
+      <div class="item"><img src="laut.jpg" alt="Buku 3"><p>LAUT BERCERITA<br>Rp60.500</p></div>
+      <div class="item"><img src="menara.jpeg" alt="Buku 4"><p>NEGERI 5 MENARA<br>Rp55.000</p></div>
+    </div>
+
+    <!-- Majalah Best Seller -->
+    <div class="section-title">MAJALAH BEST SELLER</div>
+    <div class="grid-container">
+      <div class="item"><img src="tempo.jpeg" alt="Majalah 1"><p>TEMPO<br>Rp164.000</p></div>
+      <div class="item"><img src="femina.jpg" alt="Majalah 2"><p>FEMINA<br>Rp130.000</p></div>
+      <div class="item"><img src="hai.jpg" alt="Majalah 3"><p>HAI<br>Rp128.000</p></div>
+      <div class="item"><img src="animonster.jpeg" alt="Majalah 4"><p>ANIMONSTER<br>Rp124.500</p></div>
+    </div>
+
+    <!-- Koran Best Seller -->
+    <div class="section-title">KORAN BEST SELLER</div>
+    <div class="grid-container">
+      <div class="item"><img src="kompas.jpeg" alt="Koran 1"><p>KOMPAS<br>Rp3.000</p></div>
+      <div class="item"><img src="jawapos.jpg" alt="Koran 2"><p>JAWA POS<br>Rp2.500</p></div>
+      <div class="item"><img src="media.jpg" alt="Koran 3"><p>MEDIA INDONESIA<br>Rp3.000</p></div>
+      <div class="item"><img src="republika.jpeg" alt="Koran 4"><p>REPLUBIKA<br>Rp3.000</p></div>
+    </div>
+
+  </div>
+
+</body>
+</html>
